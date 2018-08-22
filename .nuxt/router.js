@@ -3,9 +3,9 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const _73f17a20 = () => import('..\\pages\\about.vue' /* webpackChunkName: "pages_about" */).then(m => m.default || m)
-const _53acb19a = () => import('..\\pages\\bid\\investlist.vue' /* webpackChunkName: "pages_bid_investlist" */).then(m => m.default || m)
-const _3481c496 = () => import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */).then(m => m.default || m)
+const _479f9119 = () => import('..\\pages\\about.vue' /* webpackChunkName: "pages_about" */).then(m => m.default || m)
+const _7e4dd3c8 = () => import('..\\pages\\bid\\investlist.vue' /* webpackChunkName: "pages_bid_investlist" */).then(m => m.default || m)
+const _67576bde = () => import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */).then(m => m.default || m)
 
 
 
@@ -67,17 +67,17 @@ export function createRouter () {
     routes: [
 		{
 			path: "/about",
-			component: _73f17a20,
+			component: _479f9119,
 			name: "about"
 		},
 		{
 			path: "/bid/investlist",
-			component: _53acb19a,
+			component: _7e4dd3c8,
 			name: "bid-investlist"
 		},
 		{
 			path: "/",
-			component: _3481c496,
+			component: _67576bde,
 			name: "index"
 		}
     ],
