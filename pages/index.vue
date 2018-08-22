@@ -1,17 +1,5 @@
 <template>
   <section class="container">
-    <!-- <img src="../assets/img/logo.png" alt="Nuxt.js Logo" class="logo" />
-      <h1 class="title">
-        Universal Vue.js Application Framework
-        {{ title }}
-        项目名称：{{ info.bidName }}
-      </h1>
-      <nuxt-link class="button" to="/about">
-        About page
-      </nuxt-link> -->
-      <div>
-
-      </div>
     <div class="list-panel index-panel swiper-container">
       <div id="new-player">
         <a>
@@ -44,25 +32,27 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        title: "峰向标"
-      }
-    },
-    async asyncData({app}) {
-      const {data} = await app.$axios.post("/phone/index?limit=8&requestSource=android&version=v2&versionCode=50000");
-      console.log(data);
-      return {
-        info: data.financial.financial,
-        newStand:data.financial
-      }
-    }
+export default {
+  data() {
+    return {
+      title: "峰向标"
+    };
+  },
+  async asyncData({ app }) {
+    const { data } = await app.$axios.post(
+      "/phone/index?limit=8&requestSource=android&version=v2&versionCode=50000"
+    );
+    console.log(data);
+    return {
+      info: data.financial.financial,
+      newStand: data.financial
+    };
   }
+};
 </script>
 
 <style scoped>
-  .title {
-    margin: 50px 0;
-  }
+.title {
+  margin: 50px 0;
+}
 </style>
