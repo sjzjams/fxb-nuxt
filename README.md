@@ -1,7 +1,6 @@
 # fxbui
 
 > Nuxt.js project,本项目发布在heroku上面,（调用服务在https://github.com/sjzjams/node-express，此项目部署在now.sh上面）
->...test
 
 ## Build Setup
 
