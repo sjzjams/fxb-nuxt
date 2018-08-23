@@ -37,6 +37,8 @@ module.exports = {
   },
   plugins: [
     /*'~plugins/muse-ui.js',引用muse-ui框架*/ 
+   '~plugins/element-ui.js',/*引用element-ui */
+     /*'~plugins/iview-ui.js',/*引用element-ui */
   ],
   /*
    ** Build configuration
@@ -45,6 +47,14 @@ module.exports = {
     /*
      ** Run ESLINT on save
      */
+    babel: {
+      plugins: [
+        ['component', {
+          libraryName: 'element-ui',
+          styleLibraryName: 'theme-chalk'
+        }]
+      ]
+    }
     // extend(config, ctx) {
     //   if (ctx.isClient) {
     //     config.module.rules.push({

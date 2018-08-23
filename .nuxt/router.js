@@ -4,7 +4,9 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 const _479f9119 = () => import('..\\pages\\about.vue' /* webpackChunkName: "pages_about" */).then(m => m.default || m)
+const _f59f4d58 = () => import('..\\pages\\bid\\productlist.vue' /* webpackChunkName: "pages_bid_productlist" */).then(m => m.default || m)
 const _7e4dd3c8 = () => import('..\\pages\\bid\\investlist.vue' /* webpackChunkName: "pages_bid_investlist" */).then(m => m.default || m)
+const _02ba5c34 = () => import('..\\pages\\bid\\transfer.vue' /* webpackChunkName: "pages_bid_transfer" */).then(m => m.default || m)
 const _67576bde = () => import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */).then(m => m.default || m)
 
 
@@ -71,9 +73,19 @@ export function createRouter () {
 			name: "about"
 		},
 		{
+			path: "/bid/productlist",
+			component: _f59f4d58,
+			name: "bid-productlist"
+		},
+		{
 			path: "/bid/investlist",
 			component: _7e4dd3c8,
 			name: "bid-investlist"
+		},
+		{
+			path: "/bid/transfer",
+			component: _02ba5c34,
+			name: "bid-transfer"
 		},
 		{
 			path: "/",

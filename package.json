@@ -17,13 +17,17 @@
     "@nuxtjs/component-cache": "^1.1.2",
     "@nuxtjs/pwa": "^2.0.8",
     "cross-env": "^5.0.1",
+    "element-ui": "^2.4.6",
+    "iview": "^3.0.1",
     "koa": "^2.4.1",
     "muse-ui": "^3.0.0",
     "nuxt": "latest",
-    "source-map-support": "^0.4.15"
+    "source-map-support": "^0.4.15",
+    "vue": "^2.5.17"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
+    "babel-plugin-component": "^1.1.1",
     "babel-plugin-import": "^1.8.0",
     "backpack-core": "^0.3.0",
     "eslint": "^3.13.1",
@@ -36,7 +40,9 @@
     "eslint-plugin-standard": "^3.0.1",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
+    "node-sass": "^4.9.3",
     "nodemon": "^1.11.0",
+    "sass-loader": "^7.1.0",
     "scmp": "^2.0.0"
   }
 }

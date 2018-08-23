@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <div  class="list-panel">
+    <div class="list-panel">
       <div v-for="item in newList" :key="item.id" class="list-panel-box row mt10 bg-white">
         <a href="">
           <div class="col-12">
@@ -41,8 +41,7 @@ export default {
     const { data } = await app.$axios.post("/wisdomProduct/phone/findWisdomList?userId=226079");
     console.log(data);
     return {
-      newList: data.page,
-      loading: true
+      newList: data.page
     };
   },
 

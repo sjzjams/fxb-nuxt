@@ -100,8 +100,8 @@ module.exports = {
     proxyHeaders: false
   },
   plugins: [
-    /*'~plugins/muse-ui.js',引用muse-ui框架*/
-  ],
+  /*'~plugins/muse-ui.js',引用muse-ui框架*/
+  '~plugins/element-ui.js'],
   /*
    ** Build configuration
    */
@@ -109,17 +109,22 @@ module.exports = {
     /*
      ** Run ESLINT on save
      */
-    // extend(config, ctx) {
-    //   if (ctx.isClient) {
-    //     config.module.rules.push({
-    //       enforce: 'pre',
-    //       test: /\.(js)$/,
-    //       loader: 'eslint-loader',
-    //       exclude: /(node_modules)/
-    //     })
-    //   }
-    // }
-  }
+    babel: {
+      plugins: [['component', {
+        libraryName: 'element-ui',
+        styleLibraryName: 'theme-chalk'
+      }]]
+      // extend(config, ctx) {
+      //   if (ctx.isClient) {
+      //     config.module.rules.push({
+      //       enforce: 'pre',
+      //       test: /\.(js)$/,
+      //       loader: 'eslint-loader',
+      //       exclude: /(node_modules)/
+      //     })
+      //   }
+      // }
+    } }
 };
 
 /***/ },

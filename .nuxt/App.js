@@ -6,7 +6,9 @@ import '..\\assets\\css\\main.css'
 
 let layouts = {
 
-  "_default": () => import('..\\layouts\\default.vue'  /* webpackChunkName: "layouts_default" */).then(m => m.default || m)
+  "_default": () => import('..\\layouts\\default.vue'  /* webpackChunkName: "layouts_default" */).then(m => m.default || m),
+
+  "_investlisttmp": () => import('..\\layouts\\investlisttmp.vue'  /* webpackChunkName: "layouts_investlisttmp" */).then(m => m.default || m)
 
 }
 
