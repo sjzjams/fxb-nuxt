@@ -48,7 +48,7 @@ export default {
 
   head() {
     return {
-      title: `投资页面 Page (${this.name}-side)`
+      title: `投资页面 Page `
     };
   }
 };
