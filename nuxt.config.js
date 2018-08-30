@@ -16,7 +16,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['~assets/css/main.css'],
+  css: ['~assets/css/main.css','swiper/dist/css/swiper.css'],
   /*
   ** Customize the progress-bar color
   */
@@ -38,6 +38,8 @@ module.exports = {
   plugins: [
     /*'~plugins/muse-ui.js',引用muse-ui框架*/ 
    '~plugins/element-ui.js',/*引用element-ui */
+   { src: '~/plugins/swiper.js', ssr: false },
+   /*{ src: '~/plugins/swiper', ssr: false }*/
      /*'~plugins/iview-ui.js',/*引用element-ui */
   ],
   /*
