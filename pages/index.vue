@@ -1,5 +1,8 @@
 <template>
   <section class="container">
+    <div class="banner">
+      
+    </div>
     <div class="list-panel index-panel swiper-container">
       <div id="new-player">
         <a>
@@ -32,12 +35,16 @@
 </template>
 
 <script>
+import hadeCarousel from '../components/hadeCarousel.vue'
 export default {
   data() {
     return {
       title: "峰向标"
     };
   },
+  components:{
+        hadeCarousel
+    },
   async asyncData({ app }) {
     const { data } = await app.$axios.post(
       "/phone/index?limit=8&requestSource=android&version=v2&versionCode=50000"

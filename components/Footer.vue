@@ -36,7 +36,7 @@
         <span class="ui-bottom-icon ui-bottom-icon-find"></span>
         <p class="ui-bottom-tabbar">发现</p>
         </el-menu-item>
-        <el-menu-item index="/personal">
+        <el-menu-item index="/login">
         <span class="ui-bottom-icon ui-bottom-icon-my"></span>
         <p class="ui-bottom-tabbar">我的</p>
         </el-menu-item>
