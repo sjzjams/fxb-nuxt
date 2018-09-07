@@ -7,7 +7,8 @@ Vue.use(Vuex)
 const store = () => new Vuex.Store({
 
   state: {
-    counter: 0
+    counter: 0,
+    authUser:null
   },
   actions: {
       Login({commit},{vm,username,password}) {
@@ -23,7 +24,7 @@ const store = () => new Vuex.Store({
               if (res.data.result === 'SUCCESS') {
                   
               }else {
-                
+                commit('SET_USER', 'data')
                 Message({
                     showClose: true,
                     message: res.data.message,
@@ -34,11 +35,17 @@ const store = () => new Vuex.Store({
           }).catch(err=>{
               console.log('err',err)
           })
+      },
+      Logout({commit},{vm}){
+        commit('SET_USER', null)
       }
   },
   mutations: {
     increment (state) {
       state.counter++
+    },
+    SET_USER(state,user){
+        state.authUser = user
     }
   }
 })
