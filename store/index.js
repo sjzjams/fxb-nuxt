@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import util from '@/libs/util.js'
 import { Message } from '../node_modules/element-ui';
 
 Vue.use(Vuex)
@@ -22,9 +23,11 @@ const store = () => new Vuex.Store({
           }).then(res=>{
               console.log(res.data)
               if (res.data.result === 'SUCCESS') {
-                  
+                util.cookies.set('uuid', res.data.uuid)
+                util.cookies.set('token', res.data.token)
               }else {
-                commit('SET_USER', 'data')
+                //commit('SET_USER', 'data')
+                util.cookies.set('err', res.data.message)
                 Message({
                     showClose: true,
                     message: res.data.message,
@@ -36,9 +39,6 @@ const store = () => new Vuex.Store({
               console.log('err',err)
           })
       },
-      Logout({commit},{vm}){
-        commit('SET_USER', null)
-      }
   },
   mutations: {
     increment (state) {

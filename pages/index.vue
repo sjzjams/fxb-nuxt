@@ -35,9 +35,13 @@
 </template>
 
 <script>
+import util from '@/libs/util.js'
 import hadeCarousel from '../components/hadeCarousel.vue'
+
 export default {
+  
   data() {
+    console.log(util.cookies.get('err'))
     return {
       title: "峰向标"
     };
@@ -46,6 +50,7 @@ export default {
         hadeCarousel
     },
   async asyncData({ app }) {
+    
     const { data } = await app.$axios.post(
       "/phone/index?limit=8&requestSource=android&version=v2&versionCode=50000"
     );
