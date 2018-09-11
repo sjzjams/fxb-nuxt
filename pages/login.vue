@@ -3,8 +3,8 @@
       <div class="form-group">
           <el-card>
           <el-form ref="loginForm" label-position="top" :model="formLogin">
-            <el-form-item  prop="username">
-              <el-input type="text" v-model="formLogin.username" placeholder="用户名">
+            <el-form-item  prop="userAccount">
+              <el-input type="text" v-model="formLogin.userAccount" placeholder="用户名">
                 <i slot="prepend" class="fa fa-user-circle-o">用户名</i>
               </el-input>
             </el-form-item>
@@ -31,8 +31,8 @@
           return {
             // 表单
             formLogin: {
-                username: 'admin',
-                password: 'admin',
+                userAccount: '',
+                password: '',
                 code: 'v9am'
             }
           }
@@ -45,7 +45,7 @@
         submit(){
             this.Login({
                 vm:this,
-                username:this.formLogin.username,
+                userAccount:this.formLogin.userAccount,
                 password:this.formLogin.password
             })
         }

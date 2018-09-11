@@ -12,22 +12,24 @@ const store = () => new Vuex.Store({
     authUser:null
   },
   actions: {
-      Login({commit},{vm,username,password}) {
-          let param=new URLSearchParams()
-          param.append('username',username)
-          param.append('password',password)
+      Login({commit},{vm,userAccount,password}) {
           vm.$axios({
               method:'post',
-              url:'https://node-koa2-pggpllcgtl.now.sh/user/phone/login',
-              param
+              url:'https://node-koa2-pggpllcgtl.now.sh/user/phone/login?userAccount='+userAccount+'&password='+password,
           }).then(res=>{
               console.log(res.data)
               if (res.data.result === 'SUCCESS') {
-                util.cookies.set('uuid', res.data.uuid)
+                util.cookies.set('uuid', res.data.authInfo.user.userId)
                 util.cookies.set('token', res.data.token)
+                //刷新页面store消失，需要存到LocalStorage
+                commit('SET_USER', res.data.authInfo.user)
+                // 跳转路由
+                vm.$router.push({
+                name: 'userCenter'
+              })
               }else {
                 //commit('SET_USER', 'data')
-                util.cookies.set('err', res.data.message)
+                //util.cookies.set('err', res.data.message)
                 Message({
                     showClose: true,
                     message: res.data.message,
