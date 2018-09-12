@@ -10,7 +10,8 @@
 export default {
   middleware: 'auth',
   data(){
-
+    //跳转路由 data数据必须要有return{} 。。。
+    return{}
   }
 }
 </script>
