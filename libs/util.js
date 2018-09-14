@@ -4,7 +4,7 @@ import Cookies from 'js-cookie'
 import UaParser from 'ua-parser-js'
 
 // fxb 版本
-const version = '1.0.0'//process.env.VUE_APP_ICE_VERSION
+const version = '1.0.0' //process.env.VUE_APP_ICE_VERSION
 
 const util = {
   cookies: {}

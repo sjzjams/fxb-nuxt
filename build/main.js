@@ -84,7 +84,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['~assets/css/main.css', 'swiper/dist/css/swiper.css'],
+  css: ['~assets/css/base.css', '~assets/css/main.css', 'swiper/dist/css/swiper.css'],
   /*
   ** Customize the progress-bar color
   */
@@ -101,7 +101,7 @@ module.exports = {
   },
   plugins: [
   /*'~plugins/muse-ui.js',引用muse-ui框架*/
-  '~plugins/element-ui.js', /*引用element-ui */
+  /*'~plugins/element-ui.js',引用element-ui */
   { src: '~/plugins/swiper.js', ssr: false }],
   /*
    ** Build configuration
@@ -112,11 +112,17 @@ module.exports = {
      */
     vendor: ['axios'],
     extractCSS: { allChunks: true },
-    babel: {
-      plugins: [['component', {
-        libraryName: 'element-ui',
-        styleLibraryName: 'theme-chalk'
-      }]]
+    filenames: {
+      vendor: 'vendor.[hash].js',
+      app: 'app.[chunkhash].js'
+      // babel: {
+      //   plugins: [
+      //     ['component', {
+      //       libraryName: 'element-ui',
+      //       styleLibraryName: 'theme-chalk'
+      //     }]
+      //   ]
+      // }
       // extend(config, ctx) {
       //   if (ctx.isClient) {
       //     config.module.rules.push({
