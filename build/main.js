@@ -110,6 +110,8 @@ module.exports = {
     /*
      ** Run ESLINT on save
      */
+    vendor: ['axios'],
+    extractCSS: { allChunks: true },
     babel: {
       plugins: [['component', {
         libraryName: 'element-ui',
