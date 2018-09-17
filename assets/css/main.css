@@ -118,15 +118,85 @@
 .wisdom_datalist .datalis1 p {color: #ED6A3C;margin: 0}
 .wisdom_datalist .datalis1 .colo {color: #999999;}
 .wisdom_datalist .datalis1 p i {font-size: 44px;font-weight: 500}
-.datalis1 .term{}
 .datalis1 .term .lef{float: left;}
 .datalis1 .term .rig{float: right}
-.datalis1 .xian{border: 1.5px solid #62D0FA;margin-top: 20px;}
-.datalis1 .but {background-color: #2A6EED;margin-top: 20px;width: 210px;height: 40px;line-height: 40px;text-align: center;color: #fff}
-
-
+/* 进度条 */
+.datalis1 .progress {  
+  overflow: hidden;  
+  height: 3px;  
+  margin-bottom: 20px;  
+  margin-top: 20px;   
+  background-color: #f7f7f7;  
+  background-image: -moz-linear-gradient(top, #f5f5f5, #f9f9f9);  
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#f9f9f9));  
+  background-image: -webkit-linear-gradient(top, #f5f5f5, #f9f9f9);  
+  background-image: -o-linear-gradient(top, #f5f5f5, #f9f9f9);  
+  background-image: linear-gradient(to bottom, #f5f5f5, #f9f9f9);  
+  background-repeat: repeat-x;  
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#fff9f9f9', GradientType=0);  
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);  
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);  
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);  
+  -webkit-border-radius: 4px;  
+  -moz-border-radius: 4px;  
+  border-radius: 4px;  
+  margin-right:12px;  
+}  
+.datalis1 .progress .bar {  
+  width: 0%;  
+  height: 100%;  
+  color: #ffffff;  
+  float: left;  
+  text-align: center;  
+  align-items: center;  
+  display: flex;  
+  justify-content: center;  
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);  
+  background-color: #0e90d2;  
+  background-image: -moz-linear-gradient(top, #149bdf, #0480be);  
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#149bdf), to(#0480be));  
+  background-image: -webkit-linear-gradient(top, #149bdf, #0480be);  
+  background-image: -o-linear-gradient(top, #149bdf, #0480be);  
+  background-image: linear-gradient(to bottom, #149bdf, #0480be);  
+  background-repeat: repeat-x;  
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff149bdf', endColorstr='#ff0480be', GradientType=0);  
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);  
+  -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);  
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);  
+  -webkit-box-sizing: border-box;  
+  -moz-box-sizing: border-box;  
+  box-sizing: border-box;  
+  -webkit-transition: width 0.6s ease;  
+  -moz-transition: width 0.6s ease;  
+  -o-transition: width 0.6s ease;  
+  transition: width 0.6s ease;  
+}   
+.datalis1 .but {background-color: #2A6EED;margin-top: 20px;width: 210px;height: 40px;line-height: 40px;text-align: center;color: #fff;font-size: 16px;}
 /* ----end------*/  
 
+/* 首页精选散标----start */
+.content_scattered{width: 100%;height: auto;}
+.content_scattered .wisdom_leftnav {width: 284px;height: 333px;background: url(../img/wisdom_leftnav.jpg)no-repeat left;padding-top: 27px;margin-right: 15px;float: left;}
+.content_scattered .wisdom_leftnav div {width: 238px;height: 56px;line-height: 56px;float: right;font-size: 16px;font-weight: 600;color: #fff;padding-left: 32px;}
+.content_scattered .wisdom_leftnav div:hover {background-color: #fff;color: #2F74F6}
+.wisdom_rightdetails {float: left;width: 900px;height: 333px;}
+.wisdom_rightdetails .rightdetails_t {width: 100%;height: 111px;border-bottom: 1px solid #FFF2F2F2;background-color: #fff;padding: 26px 40px;}
+.wisdom_rightdetails .rightdetails_b {width: 100%;height: 111px;border-bottom: none;background-color: #fff;}
+.wisdom_rightdetails .rightdetails_t .rightdetails_t1 {float: left;padding-top: 5px;}
+.wisdom_rightdetails .rightdetails_t .rightdetails_t2 {float: left;}
+.wisdom_rightdetails .rightdetails_t .rightdetails_t1 div {height: 30px;line-height: 30px;}
+.wisdom_rightdetails .rightdetails_t .rightdetails_t1 .plotting_box .plotting {width: 18px;height: 18px;background-color: #62D0FA;border-radius: 50%;background: rgba(98, 208, 250, 1);color: #fff;
+  font-size: 12px;display: inline-block;text-align: center;line-height: 18px;}
+.wisdom_rightdetails .rightdetails_t .rightdetails_t1 .plotting_box .mark_text {font-size: 14px;color: #333333;font-weight: 400;font-family: PingFangSC-Regular;padding-left: 8px;font-weight: 550}
+.wisdom_rightdetails .rightdetails_t .rightdetails_t1 .money_box span {color: #999999;font-size: 12px;}
+.wisdom_rightdetails .rightdetails_t .rightdetails_t1 .money_box span i {color: #333333;font-size: 14px;font-weight: 550}
+.wisdom_rightdetails .rightdetails_t .rightdetails_t2 {}
+.wisdom_rightdetails .rightdetails_t .rightdetails_t2 .money_box {font-size: 30px;color: #ED6A3C;}
+.wisdom_rightdetails .rightdetails_t .rightdetails_t2 .money_box i {font-size: 18px;color: #ED6A3C;}
+.wisdom_rightdetails .rightdetails_t .rightdetails_t2 .money_text {font-size: 12px;color: #999999;}
+.wisdom_rightdetails .rightdetails_t .rightdetails_t2 {}
+.wisdom_rightdetails .rightdetails_t .rightdetails_t2 {}
+/* ----end------*
 /*
   首页-footer----start
 */
