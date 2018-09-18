@@ -54,28 +54,7 @@
 
 
 <style lang="scss" scoped>
-  .container {padding: 0;width: 100%;}
-  // .my-swiper {
-  //   .swiper-slide {
-      
-  //     text-align: center;
-  //     font-size: 38px;
-  //     font-weight: 700;
-  //     background-color: #eee;
-  //     display: flex;
-  //     justify-content: center;
-  //     align-items: center;
-  //   }
-  //   .swiper-container {
-  //     width: 100%;
-  //     height: 100%;
-  //   }
-  //   .swiper-pagination {
-  //     > .swiper-pagination-bullet {
-  //       background-color: red;
-  //     }
-  //   }
-  // }
+
   .swiper-container {
       width: 100%;
       height: 100%;
