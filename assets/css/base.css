@@ -84,7 +84,7 @@ table {
 }
 .clearfix::after,
 .clearfix::before{
-    content: ".";
+    content: " ";
     height: 0;
     line-height: 0;
     display: block;
