@@ -5,21 +5,21 @@ export default function (context) {
   const { userAgent, route, redirect } = context
   console.log("userAgent: "+userAgent)
   console.log("rout.path: "+route.path)
-//   if (userAgent.indexOf('Mobile') > -1) {
-//     if (route.path === '/') {
-//       redirect('/m')
-//     } else if (route.path.indexOf('/m/') === -1 && route.path !== '/m') {
-//       redirect(`/m${route.fullPath}`)
-//     }
-//   }
+  if (userAgent.indexOf('Mobile') > -1) {
+    if (route.path === '/') {
+      redirect('/m')
+    } else if (route.path.indexOf('/m/') === -1 && route.path !== '/m') {
+      redirect(`/m${route.fullPath}`)
+    }
+  }
 
-//   if (userAgent.indexOf('Mobile') === -1) {
-//     if (route.path === '/m') {
-//       redirect('/')
-//     } else if (route.path.indexOf('/m/') > -1) {
-//       redirect(route.fullPath.slice(2))
-//     }
-//   }
+  if (userAgent.indexOf('Mobile') === -1) {
+    if (route.path === '/m') {
+      redirect('/')
+    } else if (route.path.indexOf('/m/') > -1) {
+      redirect(route.fullPath.slice(2))
+    }
+  }
 //TODO 需要判断如果是usercenter文件夹下都需要判断是否有token，可以在nuxt.config.js配置过滤器
   // router.beforeEach((to, from, next) => {
   //   // 验证当前路由所有的匹配中是否需要有登陆验证的
