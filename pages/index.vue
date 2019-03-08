@@ -209,17 +209,18 @@ export default {
         Cbanner,
         MyFooter
     },
-  // async asyncData({ app }) {
+  async asyncData({ app }) {
     
-  //   const { data } = await app.$axios.post(
-  //     "/phone/index?limit=8&requestSource=android&version=v2&versionCode=50000"
-  //   );
-  //   console.log(data);
-  //   return {
-  //     info: data.financial.financial,
-  //     newStand: data.financial
-  //   };
-  // }
+    const { data } = await app.$axios.post(
+      "/phone/index?limit=8&requestSource=android&version=v2&versionCode=50000"
+    );
+    console.log(data);
+    return {
+      info: data.financial.financial,
+      newStand: data.financial,
+      banner:data.financial.banners
+    };
+  }
 };
 </script>
 
