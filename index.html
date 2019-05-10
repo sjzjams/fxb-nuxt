@@ -1,0 +1,39 @@
+<script>
+  // ==UserScript==
+  // @name         饭否批量删除
+  // @namespace    http://tampermonkey.net/
+  // @version      0.1
+  // @description  try to take over the world!
+  // @author       sjzjams
+  // @match        <$URL$>
+  // @grant        none
+  // @require      https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js
+  // @include http://fanfou.com/*
+  // ==/UserScript==
+
+  (function () {
+    'use strict';
+    // Your code here...
+    var token = 'b5851f4f';
+    var url = 'http://fanfou.com';
+    $("#panel").append('<a class="dellist" onClick>批量刪除</a>');
+    $(".dellist").on('click', function () {
+      if (!confirm('你确定要批量删除这些消息吗？')) {
+        return
+      }
+      jQuery(".delete").each(function (index, item) {
+        console.log(jQuery(this).attr("href").split('/')[2]);
+        window.open(url + jQuery(this).attr("href"));
+      });
+    })
+    $(":submit").click(function () {
+      $("form").submit();
+      if (window.location.href.indexOf("home") > 0) {
+        window.close();
+      }
+    })
+    if (window.location.href.indexOf("http://fanfou.com/sjzjams")) {
+      $(":submit").trigger("click");
+    }
+  })();
+</script>

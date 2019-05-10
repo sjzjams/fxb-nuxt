@@ -21,9 +21,9 @@
     data () {
       return {
         banners: [
-          'https://fxb.tianfn.net:4443/img/2018/9/10/backgound/4b5d345fee3d4b70a20f734d6f939881.jpg',
-          'https://fxb.tianfn.net:4443/img/2018/9/10/backgound/4b5d345fee3d4b70a20f734d6f939881.jpg',
-          'https://fxb.tianfn.net:4443/img/2018/9/10/backgound/4b5d345fee3d4b70a20f734d6f939881.jpg'
+          'https://www.creditvane.com/img/2019/4/28/backgound/3b192d634a8044148ce35f7010ab0c92.jpg',
+          'https://www.creditvane.com/img/2019/4/28/backgound/3b192d634a8044148ce35f7010ab0c92.jpg',
+          'https://www.creditvane.com/img/2019/4/28/backgound/3b192d634a8044148ce35f7010ab0c92.jpg'
          
         ],
         swiperOption: {
