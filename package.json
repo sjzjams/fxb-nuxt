@@ -23,7 +23,7 @@
     "iview": "^3.0.1",
     "koa": "^2.4.1",
     "lowdb": "^1.0.0",
-    "ua-parser-js": "^0.7.18",
+    "ua-parser-js": "^0.7.24",
     "muse-ui": "^3.0.0",
     "nuxt": "latest",
     "source-map-support": "^0.4.15",
